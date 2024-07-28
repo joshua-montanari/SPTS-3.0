@@ -5,7 +5,6 @@ import { db } from "~/server/db/index";
 export default function LincolnShores() {
   const [singlesChecked, setSinglesChecked] = useState(false);
   const [doublesChecked, setDoublesChecked] = useState(false);
-  const [testPosts, setTestPosts] = useState<any[]>([]);
 
   async function getPosts() {
     return await db.query.posts.findMany();
